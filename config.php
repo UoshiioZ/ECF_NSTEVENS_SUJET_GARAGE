@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "votre_nom_utilisateur"; // Remplacez par votre nom d'utilisateur MySQL
-$password = "votre_mot_de_passe"; // Remplacez par votre mot de passe MySQL
+$username = "SNOMERTIN"; // Remplacez par votre nom d'utilisateur MySQL
+$password = "Chocolat"; // Remplacez par votre mot de passe MySQL
 $dbname = "garage_avis";
 
 // Créer une connexion à la base de données
@@ -13,3 +13,9 @@ if ($conn->connect_error) {
 }
 ?>
 
+<?php
+define('DB_HOST', 'localhost'); // Remplacez 'localhost' par le nom de l'hôte de votre base de données
+define('DB_USER', 'SNOMERTIN'); // Remplacez 'votre_nom_utilisateur' par votre nom d'utilisateur MySQL
+define('DB_PASSWORD', 'Chocolat'); // Remplacez 'votre_mot_de_passe' par votre mot de passe MySQL
+define('DB_NAME', 'garage_avis'); // Remplacez 'garage_avis' par le nom de votre base de données
+?>
