@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-/* css/style.css */
+
 body {
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 6.5625rem; /* Hauteur de la navbar */
+    height: 6.5625rem; 
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -90,7 +90,7 @@ footer {
 }
 
 
-/* Styles pour le bouton "Se connecter" */
+
 .login-button {
     padding: 10px 30px;
     background-color: transparent;
@@ -98,7 +98,7 @@ footer {
     text-decoration: none;
     font-size: 1rem;
     border-radius: 30px;
-    border: 2px solid #1d93d6; /* Contour cyan */
+    border: 2px solid #1d93d6; 
     background-clip: padding-box;
     transition: border-color 0.3s;
     margin-right: 5rem;
@@ -106,17 +106,17 @@ footer {
 }
 
 .login-button:hover {
-    border-color: transparent; /* Rendre le contour transparent au survol */
+    border-color: transparent; 
 }
 
 .login-button:focus {
-    outline: none; /* Supprime l'effet de focus lors du clic */
+    outline: none; 
 }
 
 .hero {
     position: relative;
-    height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
-    overflow: hidden; /* Empêche le contenu de dépasser de la section */
+    height: 100vh; 
+    overflow: hidden; 
 }
 
 .hero-image {
@@ -128,8 +128,8 @@ footer {
     background-image: url('/ECF_N_STEVENS_SUJET_GARAGE/assets/images/section_1.jpg');
     background-size: cover;
     background-position: center;
-    z-index: -1; /* Place l'image en-dessous du contenu */
-    opacity: 0.7; /* Opacité pour l'effet assombri */
+    z-index: -1; 
+    opacity: 0.7; 
 }
 
 
@@ -140,7 +140,7 @@ footer {
     transform: translate(-50%, -50%);
     text-align: center;
     color: #fff;
-    z-index: 1; /* Place le contenu au-dessus de l'image */
+    z-index: 1; 
 }
 
 .hero-content img {
@@ -163,18 +163,18 @@ footer {
     text-decoration: none;
     font-size: 1rem;
     border-radius: 30px;
-    border: 2px solid yellow; /* Contour jaune */
-    background-image: linear-gradient(121deg, rgba(255,255,0,1) 0%, rgba(255,165,0,1) 39%, rgba(255,69,0,1) 100%); /* Dégradé à l'intérieur du contour */
+    border: 2px solid yellow; 
+    background-image: linear-gradient(121deg, rgba(255,255,0,1) 0%, rgba(255,165,0,1) 39%, rgba(255,69,0,1) 100%); 
     background-clip: padding-box;
     transition: border-color 0.3s;
 }
 
 .en-savoir-plus:hover {
-    border-color: transparent; /* Rendre le contour transparent au survol */
+    border-color: transparent; 
 }
 
 .en-savoir-plus:focus {
-    outline: none; /* Supprime l'effet de focus lors du clic */
+    outline: none; 
 }
 
 /**********Services Section***********/
@@ -182,8 +182,8 @@ footer {
 
 .section-reparation {
     position: relative;
-    height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
-    overflow: hidden; /* Empêche le contenu de dépasser de la section */
+    height: 100vh; 
+    overflow: hidden; 
 }
 
 .section-reparation-image {
@@ -195,8 +195,8 @@ footer {
     background-image: url('/ECF_N_STEVENS_SUJET_GARAGE/assets/images/pexels-gustavo-fring-6870319.jpg');
     background-size: cover;
     background-position: center;
-    z-index: -1; /* Place l'image en-dessous du contenu */
-    opacity: 0.7; /* Opacité pour l'effet assombri */
+    z-index: -1; 
+    opacity: 0.7; 
 }
 
 
@@ -207,7 +207,7 @@ footer {
     transform: translate(-50%, -50%);
     text-align: left;
     color: #fff;
-    z-index: 1; /* Place le contenu au-dessus de l'image */
+    z-index: 1; 
     width: 55.6875rem;
 }
 
@@ -228,18 +228,18 @@ footer {
     text-decoration: none;
     font-size: 1rem;
     border-radius: 30px;
-    border: 2px solid yellow; /* Contour jaune */
-    background-image: linear-gradient(121deg, rgba(255,255,0,1) 0%, rgba(255,165,0,1) 39%, rgba(255,69,0,1) 100%); /* Dégradé à l'intérieur du contour */
+    border: 2px solid yellow; 
+    background-image: linear-gradient(121deg, rgba(255,255,0,1) 0%, rgba(255,165,0,1) 39%, rgba(255,69,0,1) 100%); 
     background-clip: padding-box;
     transition: border-color 0.3s;
 }
 
 .section-reparation-rdv:hover {
-    border-color: transparent; /* Rendre le contour transparent au survol */
+    border-color: transparent; 
 }
 
 .section-reparation-rdv:focus {
-    outline: none; /* Supprime l'effet de focus lors du clic */
+    outline: none; 
 }
 
 
@@ -248,8 +248,8 @@ footer {
 
 .section-achat {
     position: relative;
-    height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
-    overflow: hidden; /* Empêche le contenu de dépasser de la section */
+    height: 100vh; 
+    overflow: hidden; 
 }
 
 .section-achat-image {
@@ -261,8 +261,8 @@ footer {
     background-image: url('/ECF_N_STEVENS_SUJET_GARAGE/assets/images/Car_Pics/pexels-natasha-filippovskaya-4665699.jpg');
     background-size: cover;
     background-position: center;
-    z-index: -1; /* Place l'image en-dessous du contenu */
-    opacity: 0.7; /* Opacité pour l'effet assombri */
+    z-index: -1; /
+    opacity: 0.7; 
 }
 
 
@@ -273,7 +273,7 @@ footer {
     transform: translate(-50%, -50%);
     text-align: left;
     color: #fff;
-    z-index: 1; /* Place le contenu au-dessus de l'image */
+    z-index: 1; 
     width: 55.6875rem;
 }
 
@@ -294,18 +294,18 @@ footer {
     text-decoration: none;
     font-size: 1rem;
     border-radius: 30px;
-    border: 2px solid yellow; /* Contour jaune */
-    background-image: linear-gradient(121deg, rgba(255,255,0,1) 0%, rgba(255,165,0,1) 39%, rgba(255,69,0,1) 100%); /* Dégradé à l'intérieur du contour */
+    border: 2px solid yellow; 
+    background-image: linear-gradient(121deg, rgba(255,255,0,1) 0%, rgba(255,165,0,1) 39%, rgba(255,69,0,1) 100%); 
     background-clip: padding-box;
     transition: border-color 0.3s;
 }
 
 .section-achat-newpage:hover {
-    border-color: transparent; /* Rendre le contour transparent au survol */
+    border-color: transparent; 
 }
 
 .section-achat-newpage:focus {
-    outline: none; /* Supprime l'effet de focus lors du clic */
+    outline: none; /
 }
 
 
@@ -314,8 +314,8 @@ footer {
 
 .section-avis {
     position: relative;
-    height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
-    overflow: hidden; /* Empêche le contenu de dépasser de la section */
+    height: 100vh; 
+    overflow: hidden; /
 }
 
 .section-avis-image {
@@ -327,8 +327,8 @@ footer {
     background-image: url('/ECF_N_STEVENS_SUJET_GARAGE/assets/images/pexels-andrea-piacquadio-3775553.jpg');
     background-size: cover;
     background-position: center;
-    z-index: -1; /* Place l'image en-dessous du contenu */
-    opacity: 0.7; /* Opacité pour l'effet assombri */
+    z-index: -1; 
+    opacity: 0.7; 
 }
 
 
@@ -339,7 +339,7 @@ footer {
     transform: translate(-50%, -50%);
     text-align: left;
     color: #fff;
-    z-index: 1; /* Place le contenu au-dessus de l'image */
+    z-index: 1; 
     width: 55.6875rem;
 }
 
@@ -394,11 +394,11 @@ footer {
 .input-container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px; /* Espacement entre les champs */
+    margin-bottom: 10px; 
 }
 
 .input-container label {
-    width: 20rem; /* Largeur des libellés pour aligner les champs */
+    width: 20rem; 
     font-size: 1.2rem;
     font-weight: bold;
 }
@@ -414,7 +414,7 @@ footer {
 
 
 #avisForm textarea {
-    height: 20rem; /* Hauteur du champ de texte agrandie */
+    height: 20rem; 
 }
 
 #avisForm input:focus,
@@ -467,8 +467,8 @@ footer {
 
 .section-contact {
     position: relative;
-    height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
-    overflow: hidden; /* Empêche le contenu de dépasser de la section */
+    height: 100vh; 
+    overflow: hidden; 
 }
 
 .section-contact-image {
@@ -480,19 +480,19 @@ footer {
     background-color: #FFF;
     background-size: cover;
     background-position: center;
-    z-index: -1; /* Place l'image en-dessous du contenu */
-    opacity: 0%; /* Opacité pour l'effet assombri */
+    z-index: -1; 
+    opacity: 0%; 
 }
 
 
 .section-contact-content {
     position: absolute;
-    top: 20%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: #fff;
-    z-index: 1; /* Place le contenu au-dessus de l'image */
+    z-index: 1; 
     width: 55.6875rem;
 }
 
@@ -502,4 +502,32 @@ footer {
     font-style: normal;
     font-weight: 700;
     line-height: normal; 
+}
+
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+.input-container {
+    flex-basis: 48%;
+}
+
+.pill-button {
+    background-color: rgb(212, 105, 34);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.pill-button:hover {
+    background-color: #d3b11c; 
 }

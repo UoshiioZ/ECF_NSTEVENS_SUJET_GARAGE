@@ -1,3 +1,48 @@
+<?php
+// Inclure le fichier de configuration
+require_once 'config.php';
+
+// Etablir la connexion à la base de données
+$conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+
+// Vérifier la connexion
+if ($conn->connect_error) {
+    die("La connexion à la base de données a échoué : " . $conn->connect_error);
+}
+
+    // Etablir la connexion à la base de données
+    
+    // Requête SQL pour sélectionner les avis vérifiés
+    $sql = "SELECT * FROM avis WHERE verifie = 1";
+
+    // Exécuter la requête SQL
+    $result = $conn->query($sql);
+
+    // Afficher les avis vérifiés
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $ratingHTML = '';
+            for ($i = 1; $i <= 5; $i++) {
+                if ($i <= $row['rating']) {
+                    $ratingHTML .= '<span class="star">&#9733;</span>'; // étoile pleine
+                } else {
+                    $ratingHTML .= '<span class="star">&#9734;</span>'; // étoile vide
+                }
+            }
+            echo '
+            <div class="avis-item">
+                <h3>' . $row['prenom'] . '</h3>
+                <p>' . $row['avis'] . '</p>
+                <div class="rating">' . $ratingHTML . '</div>
+            </div>
+            ';
+        }
+    } else {
+        echo '<p>Aucun avis vérifié pour le moment.</p>';
+    }
+    
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -43,17 +88,6 @@
             <a class="section-achat-newpage" href="pages\ventes.php">Voir nos voitures</a>
         </div>
     </section>
-    <?php
-        require_once 'config.php'; // Inclure le fichier de configuration
-
-        // Etablir la connexion à la base de données
-        $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-
-        // Vérifier la connexion
-        if ($conn->connect_error) {
-            die("La connexion à la base de données a échoué : " . $conn->connect_error);
-        }
-    ?>
 
     <section class="section-avis" id="section-avis">
         <div class=section-avis-image></div>
@@ -91,44 +125,43 @@
         </div>
         <div class="avis-list">
         <h2>Avis des utilisateurs</h2>
-    <?php
-    // Etablir la connexion à la base de données
     
-    // Requête SQL pour sélectionner les avis vérifiés
-    $sql = "SELECT * FROM avis WHERE verifie = 1";
-
-    // Exécuter la requête SQL
-    $result = $conn->query($sql);
-
-    // Afficher les avis vérifiés
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $ratingHTML = '';
-            for ($i = 1; $i <= 5; $i++) {
-                if ($i <= $row['rating']) {
-                    $ratingHTML .= '<span class="star">&#9733;</span>'; // étoile pleine
-                } else {
-                    $ratingHTML .= '<span class="star">&#9734;</span>'; // étoile vide
-                }
-            }
-            echo '
-            <div class="avis-item">
-                <h3>' . $row['prenom'] . '</h3>
-                <p>' . $row['avis'] . '</p>
-                <div class="rating">' . $ratingHTML . '</div>
-            </div>
-            ';
-        }
-    } else {
-        echo '<p>Aucun avis vérifié pour le moment.</p>';
-    }
-    ?>tablie dans votre fichier
         </div>
     </section>
     <section class="section-contact" id="section-contact">
         <div class=section-contact-image></div>
         <div class="section-contact-content">
             <h1>NOUS CONTACTER!</h1>
+            <form id="contactForm" action="traitement_contact.php" method="post">
+            <div class="input-row">
+                <div class="input-container">
+                    <label for="prenom">Prénom:</label>
+                    <input type="text" id="prenom" name="prenom" pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+" required>
+                </div>
+                <div class="input-container">
+                    <label for="nom">Nom:</label>
+                    <input type="text" id="nom" name="nom" pattern="[A-Za-zÀ-ÖØ-öø-ÿ]+" required>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-container">
+                    <label for="telephone">Téléphone:</label>
+                    <input type="tel" id="telephone" name="telephone" pattern="[0-9]{10}" required>
+                </div>
+                <div class="input-container">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="input-container">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="pill-button">Envoyer</button>
+        </form>
         </div>
     </section>
     <footer>
@@ -219,13 +252,33 @@
         `;
         avisList.prepend(avisItem); // Ajoute l'avis au début de la liste
 
-         // Fonction pour ajouter l'avis à l'affichage
-        function ajouterAvis(prenom, avis) {
-        // ... Votre code pour ajouter l'avis à l'affichage ...
+        // Fonction pour ajouter l'avis à l'affichage
+    function ajouterAvis(prenom, avis, rating) {
+        var avisList = document.querySelector('.avis-list');
+        var avisItem = document.createElement('div');
+        avisItem.classList.add('avis-item');
+
+        // Code pour afficher les étoiles à droite de la div
+        var ratingHTML = '';
+        for (var i = 1; i <= 5; i++) {
+            if (i <= rating) {
+                ratingHTML += '<span class="star">&#9733;</span>'; // étoile pleine
+            } else {
+                ratingHTML += '<span class="star">&#9734;</span>'; // étoile vide
+            }
+        }
+
+        avisItem.innerHTML = `
+            <h3>${prenom}</h3>
+            <p>${avis}</p>
+            <div class="rating">${ratingHTML}</div>
+        `;
+        avisList.prepend(avisItem); // Ajoute l'avis au début de la liste
 
         // Afficher la pop-up de remerciement
         window.open("merci.php", "popup", "width=400,height=300");
     }
+
 
     // Autres fonctions et gestionnaires d'événements...
     }
