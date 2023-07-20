@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* css/style.css */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #040013;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #292929;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6.5625rem; /* Hauteur de la navbar */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.09);
+    z-index: 10;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.navbar li:last-child {
+    margin-right: 0;
+}
+
+.navbar li a:hover {
+    color: #FFBC0F;
+}
+
+.navbar li.active a {
+    color: #FFBC0F;
+    width: 7.5625rem;
+    height: 1.3125rem;
+    color: var(--selected-section-navbar, #FFBC0F);
+    font-family: Poppins;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+
+
+.logo img {
+    height: 8rem;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #292929;
+    color: #fff;
+    display: flex;
+}
+
+.horraire{
+    color: #FFF;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+.copyright {
+    margin-left: auto;
+
+}
+
+
+/* Styles pour le bouton "Se connecter" */
+.login-button {
+    padding: 10px 30px;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 30px;
+    border: 2px solid #1d93d6; /* Contour cyan */
+    background-clip: padding-box;
+    transition: border-color 0.3s;
+    margin-right: 5rem;
+    margin-left: 5rem;
+}
+
+.login-button:hover {
+    border-color: transparent; /* Rendre le contour transparent au survol */
+}
+
+.login-button:focus {
+    outline: none; /* Supprime l'effet de focus lors du clic */
+}
+
+.hero {
+    position: relative;
+    height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
+    overflow: hidden; /* Empêche le contenu de dépasser de la section */
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/ECF_N_STEVENS_SUJET_GARAGE/assets/images/section_1.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Place l'image en-dessous du contenu */
+    opacity: 0.7; /* Opacité pour l'effet assombri */
+}
+
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1; /* Place le contenu au-dessus de l'image */
+}
+
+.hero-content img {
+    width: 51.625rem;
+}
+
+.hero-content p {
+    color: #FFF;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.1125rem;
+}
+
+.en-savoir-plus {
+    padding: 10px 30px;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 30px;
+    border: 2px solid yellow; /* Contour jaune */
+    background-image: linear-gradient(121deg, rgba(255,255,0,1) 0%, rgba(255,165,0,1) 39%, rgba(255,69,0,1) 100%); /* Dégradé à l'intérieur du contour */
+    background-clip: padding-box;
+    transition: border-color 0.3s;
+}
+
+.en-savoir-plus:hover {
+    border-color: transparent; /* Rendre le contour transparent au survol */
+}
+
+.en-savoir-plus:focus {
+    outline: none; /* Supprime l'effet de focus lors du clic */
+}
+
+/**********Services Section***********/
+
+
+.section-reparation {
+    position: relative;
+    height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
+    overflow: hidden; /* Empêche le contenu de dépasser de la section */
+}
+
+.section-reparation-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/ECF_N_STEVENS_SUJET_GARAGE/assets/images/pexels-gustavo-fring-6870319.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Place l'image en-dessous du contenu */
+    opacity: 0.7; /* Opacité pour l'effet assombri */
+}
+
+
+.section-reparation-content {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #fff;
+    z-index: 1; /* Place le contenu au-dessus de l'image */
+    width: 55.6875rem;
+}
+
+.section-reparation-content p {
+    color: #FFF;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.1125rem;
+    text-align: left;
+}
+
+.section-reparation-rdv {
+    padding: 10px 30px;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 30px;
+    border: 2px solid yellow; /* Contour jaune */
+    background-image: linear-gradient(121deg, rgba(255,255,0,1) 0%, rgba(255,165,0,1) 39%, rgba(255,69,0,1) 100%); /* Dégradé à l'intérieur du contour */
+    background-clip: padding-box;
+    transition: border-color 0.3s;
+}
+
+.section-reparation-rdv:hover {
+    border-color: transparent; /* Rendre le contour transparent au survol */
+}
+
+.section-reparation-rdv:focus {
+    outline: none; /* Supprime l'effet de focus lors du clic */
+}
+
+
+/**********Services Achat***********/
+
+
+.section-achat {
+    position: relative;
+    height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
+    overflow: hidden; /* Empêche le contenu de dépasser de la section */
+}
+
+.section-achat-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/ECF_N_STEVENS_SUJET_GARAGE/assets/images/Car_Pics/pexels-natasha-filippovskaya-4665699.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Place l'image en-dessous du contenu */
+    opacity: 0.7; /* Opacité pour l'effet assombri */
+}
+
+
+.section-achat-content {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #fff;
+    z-index: 1; /* Place le contenu au-dessus de l'image */
+    width: 55.6875rem;
+}
+
+.section-achat-content p {
+    color: #FFF;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.1125rem;
+    text-align: left;
+}
+
+.section-achat-newpage {
+    padding: 10px 30px;
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 30px;
+    border: 2px solid yellow; /* Contour jaune */
+    background-image: linear-gradient(121deg, rgba(255,255,0,1) 0%, rgba(255,165,0,1) 39%, rgba(255,69,0,1) 100%); /* Dégradé à l'intérieur du contour */
+    background-clip: padding-box;
+    transition: border-color 0.3s;
+}
+
+.section-achat-newpage:hover {
+    border-color: transparent; /* Rendre le contour transparent au survol */
+}
+
+.section-achat-newpage:focus {
+    outline: none; /* Supprime l'effet de focus lors du clic */
+}
+
+
+/**********Services Avis***********/
+
+
+.section-avis {
+    position: relative;
+    height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
+    overflow: hidden; /* Empêche le contenu de dépasser de la section */
+}
+
+.section-avis-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/ECF_N_STEVENS_SUJET_GARAGE/assets/images/pexels-andrea-piacquadio-3775553.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Place l'image en-dessous du contenu */
+    opacity: 0.7; /* Opacité pour l'effet assombri */
+}
+
+
+.section-avis-content {
+    position: absolute;
+    top: 45%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: #fff;
+    z-index: 1; /* Place le contenu au-dessus de l'image */
+    width: 55.6875rem;
+}
+
+.section-avis-content p {
+    color: #FFF;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.1125rem;
+    text-align: left;
+}
+
+.section-avis-content h1 {
+    color: #FFF;
+    font-size: 6.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.1125rem;
+    text-align: left;
+}
+
+
+/* CSS pour la liste des avis */
+.avis-list {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    color: #fff;
+    z-index: 1;
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.avis-item {
+    margin-bottom: 20px;
+}
+
+/* Style pour le formulaire d'avis */
+#avisForm {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styles pour les conteneurs des champs */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px; /* Espacement entre les champs */
+}
+
+.input-container label {
+    width: 20rem; /* Largeur des libellés pour aligner les champs */
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.input-container input,
+.input-container textarea {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #888;
+    border-radius: 5px;
+}
+
+
+
+#avisForm textarea {
+    height: 20rem; /* Hauteur du champ de texte agrandie */
+}
+
+#avisForm input:focus,
+#avisForm textarea:focus {
+    outline: none;
+}
+
+#avisForm button {
+    background-color: #FFBC0F;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+/* Styles pour les étoiles */
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    float: right;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #B5AD00;
+}
+
+.rating label:before {
+    content: '\2606'; /* étoile vide */
+    margin-left: 5px; 
+}
+
+.rating label:hover:before,
+.rating label:hover ~ label:before,
+.rating input:checked ~ label:before {
+    content: '\2605'; /* étoile pleine */
+    color: #FFD700;
+}
+
+
+
+/**********Services Contact***********/
+
+
+.section-contact {
+    position: relative;
+    height: 100vh; /* Hauteur égale à la hauteur de la fenêtre */
+    overflow: hidden; /* Empêche le contenu de dépasser de la section */
+}
+
+.section-contact-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Place l'image en-dessous du contenu */
+    opacity: 0%; /* Opacité pour l'effet assombri */
+}
+
+
+.section-contact-content {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1; /* Place le contenu au-dessus de l'image */
+    width: 55.6875rem;
+}
+
+.section-contact-content h1 {
+    color: #ffffff;
+    font-size: 2.625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; 
+}
